@@ -1,10 +1,11 @@
 # AgentJanitor
 
-Your AI coding agents leave a mess. Clean it up.
+> **Local-first diagnostics, cleanup, and maintenance CLI for AI coding agents.**
 
-AgentJanitor finds orphaned processes, bloated sessions,
-broken MCP servers, stale caches and exposed credentials
-across your AI coding tools.
+AgentJanitor finds orphaned background processes, bloated session history,
+broken MCP servers, stale caches, and exposed credentials left behind by
+your AI coding tools — **Claude Code**, **OpenAI Codex**, and **Gemini CLI** —
+and safely cleans them up, with backups and full undo.
 
 `$ agentjanitor scan`
 

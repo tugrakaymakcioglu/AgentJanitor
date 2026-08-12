@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AgentJanitor — Local-first diagnostics &amp; cleanup CLI for AI coding agents</title>
+<meta name="description" content="AgentJanitor is a local-first command-line tool that finds and safely cleans up orphaned processes, bloated session history, broken MCP servers, stale caches, and exposed credentials left behind by AI coding agents — Claude Code, OpenAI Codex, and Gemini CLI.">
+<meta name="keywords" content="AgentJanitor, AI coding agent cleanup, Claude Code cleanup, OpenAI Codex cleanup, Gemini CLI, MCP server cleanup, orphaned processes, session cleanup, agent maintenance, local-first CLI, developer tools, Python CLI">
+<meta name="author" content="tugrakaymakcioglu">
+<link rel="canonical" href="https://tugrakaymakcioglu.github.io/AgentJanitor/">
+<meta name="robots" content="index, follow">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="AgentJanitor — Clean up your AI coding agents">
+<meta property="og:description" content="Local-first diagnostics and cleanup CLI for AI coding agents (Claude Code, OpenAI Codex, Gemini CLI). Finds orphaned processes, bloated sessions, broken MCP servers, stale caches, and exposed credentials — safely.">
+<meta property="og:url" content="https://tugrakaymakcioglu.github.io/AgentJanitor/">
+<meta property="og:site_name" content="AgentJanitor">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AgentJanitor — Clean up your AI coding agents">
+<meta name="twitter:description" content="Local-first diagnostics and cleanup CLI for AI coding agents (Claude Code, OpenAI Codex, Gemini CLI).">
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; background: #0d1117; color: #e6edf3; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+  h1 { font-size: 2.2rem; margin: 0 0 .25rem; }
+  .tagline { font-size: 1.15rem; color: #8b949e; margin: 0 0 1.5rem; }
+  pre, code { background: #161b22; border: 1px solid #30363d; border-radius: 6px; }
+  pre { padding: 1rem; overflow-x: auto; }
+  code { padding: .15em .4em; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .9em; }
+  pre code { background: none; border: none; padding: 0; }
+  h2 { border-bottom: 1px solid #30363d; padding-bottom: .35rem; margin-top: 2.5rem; }
+  .btn { display: inline-block; background: #238636; color: #fff; text-decoration: none; padding: .65rem 1.1rem; border-radius: 6px; font-weight: 600; margin-right: .5rem; }
+  .btn.gh { background: #21262d; border: 1px solid #30363d; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: .75rem; margin-top: 1rem; }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: .9rem 1rem; }
+  a { color: #58a6ff; }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { border: 1px solid #30363d; padding: .5rem .75rem; text-align: left; }
+  footer { margin-top: 3rem; color: #8b949e; font-size: .85rem; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "AgentJanitor",
+  "url": "https://tugrakaymakcioglu.github.io/AgentJanitor/",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Windows, macOS, Linux",
+  "description": "Local-first diagnostics, cleanup, and maintenance CLI for AI coding agents (Claude Code, OpenAI Codex, Gemini CLI). Finds orphaned processes, bloated sessions, broken MCP servers, stale caches, and exposed credentials — and fixes them safely with backups and undo.",
+  "keywords": "ai coding agent, claude code, codex, gemini cli, mcp, cleanup, diagnostics, local-first, python",
+  "license": "https://www.apache.org/licenses/LICENSE-2.0",
+  "softwareVersion": "0.1.0",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "author": { "@type": "Organization", "name": "tugrakaymakcioglu" }
+}
+</script>
+</head>
+<body>
+<div class="wrap">
+  <h1>AgentJanitor</h1>
+  <p class="tagline">Local-first diagnostics &amp; cleanup CLI for AI coding agents.</p>
+
+  <p>
+    AgentJanitor is a <strong>local-first diagnostics and cleanup tool</strong> built for the mess
+    your AI coding agents leave behind. It finds <strong>orphaned background processes</strong>,
+    <strong>bloated session history</strong>, <strong>broken MCP servers</strong>,
+    <strong>stale caches</strong>, and <strong>exposed credentials</strong> across
+    <strong>Claude Code</strong>, <strong>OpenAI Codex</strong>, and <strong>Gemini CLI</strong> —
+    then safely cleans them up with backups and full undo.
+  </p>
+
+  <p>
+    <a class="btn" href="https://github.com/tugrakaymakcioglu/AgentJanitor">View on GitHub</a>
+    <a class="btn gh" href="https://github.com/tugrakaymakcioglu/AgentJanitor#installation">Installation</a>
+  </p>
+
+  <pre><code>$ agentjanitor scan
+$ agentjanitor fix --dry-run
+$ agentjanitor fix
+$ agentjanitor undo</code></pre>
+
+  <h2>Why AgentJanitor?</h2>
+  <p>
+    AI coding agents (Claude Code, Codex, Gemini CLI, and others) spawn background processes,
+    MCP servers, and session/cache data that quietly accumulate — leaked helper processes eating
+    RAM, gigabytes of stale session history, duplicated or broken MCP server definitions, and
+    occasionally a plaintext credential that never got rotated. AgentJanitor understands
+    agent-specific concepts (MCP servers, sessions, task workspaces, plugin caches) instead of
+    treating your machine as a generic pile of files.
+  </p>
+
+  <h2>Features</h2>
+  <div class="grid">
+    <div class="card"><strong>Agent detection</strong><br>Confidence levels with stated evidence.</div>
+    <div class="card"><strong>Orphaned process discovery</strong><br>Conservative, multi-signal classification.</div>
+    <div class="card"><strong>Session cleanup</strong><br>Archive over delete, with active-session protection.</div>
+    <div class="card"><strong>MCP server health</strong><br>Duplicate detection &amp; static checks.</div>
+    <div class="card"><strong>Credential hygiene</strong><br>Secret scanning, values never printed.</div>
+    <div class="card"><strong>Health score</strong><br>Deterministic 0–100, every point explained.</div>
+    <div class="card"><strong>Safe cleanup</strong><br>Risk-labeled actions, dry-run, backup &amp; undo.</div>
+    <div class="card"><strong>Doctor</strong><br>Deep, per-agent diagnostics.</div>
+  </div>
+
+  <h2>Supported agents</h2>
+  <table>
+    <tr><th>Agent</th><th>Status</th></tr>
+    <tr><td>OpenAI Codex</td><td>Supported</td></tr>
+    <tr><td>Claude Code</td><td>Supported</td></tr>
+    <tr><td>Gemini CLI</td><td>Experimental</td></tr>
+  </table>
+
+  <h2>Install</h2>
+  <pre><code>pipx install agentjanitor
+# or
+uv tool install agentjanitor</code></pre>
+
+  <h2>Never telemetry, never cloud</h2>
+  <p>
+    No telemetry, no cloud account, no uploads, no AI API required. Runs entirely locally.
+  </p>
+
+  <footer>
+    <p>AgentJanitor is open source, licensed under Apache-2.0.
+    Repository: <a href="https://github.com/tugrakaymakcioglu/AgentJanitor">github.com/tugrakaymakcioglu/AgentJanitor</a></p>
+  </footer>
+</div>
+</body>
+</html>
