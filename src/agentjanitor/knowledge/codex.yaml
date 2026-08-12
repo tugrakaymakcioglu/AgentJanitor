@@ -1,0 +1,18 @@
+# Known-issue knowledge base for OpenAI Codex.
+#
+# This is scaffolding for a future release: entries are loaded and
+# validated (see agentjanitor.core.knowledge) but are not yet consulted by
+# any scanner. Keep entries few, well-defined, and maintainable — this is
+# not meant to become a long list of brittle, issue-specific hacks.
+
+- id: codex-mcp-process-leak
+  agent: codex
+  description: >
+    Some Codex CLI versions can leave MCP helper subprocesses running after
+    the parent session exits, if the helper does not receive its shutdown
+    signal in time.
+  match:
+    process_pattern: "codex-mcp-helper"
+  reference:
+    repository: openai/codex
+    note: "Track upstream issues in the openai/codex repository for current status."

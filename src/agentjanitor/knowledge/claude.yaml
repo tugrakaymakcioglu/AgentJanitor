@@ -1,0 +1,17 @@
+# Known-issue knowledge base for Claude Code.
+#
+# See agentjanitor/knowledge/codex.yaml for the intent of this file: it is
+# architecture scaffolding for a future release, not yet consulted by any
+# scanner.
+
+- id: claude-code-mcp-stdio-orphan
+  agent: claude-code
+  description: >
+    Stdio-transport MCP servers launched by Claude Code can occasionally
+    remain running after the parent process is closed abruptly (e.g. the
+    terminal window is force-closed rather than exited cleanly).
+  match:
+    process_pattern: "mcp-server"
+  reference:
+    repository: anthropics/claude-code
+    note: "Track upstream issues in the anthropics/claude-code repository for current status."

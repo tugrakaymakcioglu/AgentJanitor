@@ -1,0 +1,76 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "agentjanitor"
+version = "0.1.0"
+description = "Your AI coding agents leave a mess. Clean it up. Local-first health, diagnostics, cleanup, and maintenance tool for AI coding agents."
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.12"
+authors = [{ name = "AgentJanitor contributors" }]
+keywords = [
+    "cli",
+    "claude-code",
+    "codex",
+    "gemini-cli",
+    "mcp",
+    "diagnostics",
+    "cleanup",
+    "ai-agents",
+]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: System :: Systems Administration",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "typer>=0.12.5",
+    "rich>=13.8.0",
+    "pydantic>=2.9.0",
+    "psutil>=6.0.0",
+    "platformdirs>=4.3.0",
+    "tomli>=2.0.1; python_version < '3.11'",
+    "PyYAML>=6.0.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/tugrakaymakcioglu/AgentJanitor"
+Issues = "https://github.com/tugrakaymakcioglu/AgentJanitor/issues"
+
+[project.scripts]
+agentjanitor = "agentjanitor.cli.main:app"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0",
+    "pytest-cov>=5.0.0",
+    "ruff>=0.6.9",
+    "mypy>=1.11.2",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/agentjanitor"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+disallow_untyped_defs = false
+warn_unused_ignores = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

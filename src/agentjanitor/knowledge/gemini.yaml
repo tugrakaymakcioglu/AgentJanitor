@@ -1,0 +1,8 @@
+# Known-issue knowledge base for Gemini CLI.
+#
+# See agentjanitor/knowledge/codex.yaml for the intent of this file: it is
+# architecture scaffolding for a future release, not yet consulted by any
+# scanner. Gemini CLI support is experimental (see README), so this file
+# intentionally starts empty of specific claims until they can be verified.
+
+[]
