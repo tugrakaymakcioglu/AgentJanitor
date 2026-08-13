@@ -1,6 +1,6 @@
 ## Description
-Brief description of changes.
+Briefly describe the changes.
 
 ## Checklist
-- [ ] Tests pass (`pytest`)
+- [ ] Tests pass
 - [ ] Code style adhered to
