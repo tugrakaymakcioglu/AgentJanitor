@@ -1,0 +1,8 @@
+name: Feature Request
+description: Suggest an idea or new agent adapter
+labels: ['enhancement']
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Idea

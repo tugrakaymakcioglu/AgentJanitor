@@ -5,28 +5,48 @@ build-backend = "hatchling.build"
 [project]
 name = "agentjanitor"
 version = "0.1.0"
-description = "Your AI coding agents leave a mess. Clean it up. Local-first health, diagnostics, cleanup, and maintenance tool for AI coding agents."
+description = "Clean up orphaned processes, bloated sessions, leaked credentials & broken MCP servers left by Claude Code, Codex, Cursor & Gemini CLI."
 readme = "README.md"
 license = "Apache-2.0"
 requires-python = ">=3.12"
-authors = [{ name = "AgentJanitor contributors" }]
+authors = [
+    { name = "Tugra Kaymakcioglu" },
+    { name = "AgentJanitor contributors" }
+]
 keywords = [
-    "cli",
+    "ai-agents",
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
     "claude-code",
     "codex",
+    "cursor",
     "gemini-cli",
-    "mcp",
+    "developer-tools",
+    "ai-coding-assistant",
     "diagnostics",
     "cleanup",
-    "ai-agents",
+    "process-manager",
+    "memory-leak",
+    "credential-hygiene",
+    "cli",
+    "terminal",
+    "python",
+    "antigravity",
+    "aider"
 ]
 classifiers = [
+    "Development Status :: 4 - Beta",
     "Environment :: Console",
     "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
     "License :: OSI Approved :: Apache Software License",
     "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.12",
     "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Quality Assurance",
     "Topic :: System :: Systems Administration",
     "Topic :: Utilities",
 ]
@@ -42,7 +62,9 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://github.com/tugrakaymakcioglu/AgentJanitor"
+Repository = "https://github.com/tugrakaymakcioglu/AgentJanitor.git"
 Issues = "https://github.com/tugrakaymakcioglu/AgentJanitor/issues"
+Changelog = "https://github.com/tugrakaymakcioglu/AgentJanitor/blob/main/CHANGELOG.md"
 
 [project.scripts]
 agentjanitor = "agentjanitor.cli.main:app"

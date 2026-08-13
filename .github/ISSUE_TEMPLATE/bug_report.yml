@@ -1,0 +1,8 @@
+name: Bug Report
+description: Report a bug in AgentJanitor
+labels: ['bug']
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
