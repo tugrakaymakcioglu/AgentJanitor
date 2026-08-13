@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use AgentJanitor in your research or workflows, please cite it as below."
+authors:
+  - family-names: "Kaymakcioglu"
+    given-names: "Tugra"
+title: "AgentJanitor: Local-First Diagnostics & Cleanup for AI Coding Agents and MCP Servers"
+version: 0.1.0
+date-released: 2026-08-14
+url: "https://github.com/tugrakaymakcioglu/AgentJanitor"
